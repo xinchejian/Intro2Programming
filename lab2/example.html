@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Programming with Javascript : Example 1</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#button1").click(function(){
+			$('#output').text("Hello there " + $('#text1').val());
+		});
+	});
+	</script>
+</head>
+<body>
+	<h1>Say Hello</h1>
+	Name here: <input id="text1" type="text">
+	<button id="button1">Say hello</button>
+	<div id="output"></div>
+</body>
+</html>

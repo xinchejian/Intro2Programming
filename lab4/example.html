@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Programming with Javascript : Example 1</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h1>Some control flow</h1>
+
+<!-- ==========================  IF ============================================ -->
+	<hr>
+	<h2> If </h2>
+	Put an integer here <input id="number1" type="text"><br>
+	<button id="button1">is it even?</button>
+	<div id="output"></div>
+
+	<script type="text/javascript">
+	$(function(){
+		$("#button1").click(function(){
+			var number = parseInt($('#number1').val());
+			if(number / 2 == 1) {
+				$('#output').text("This is an odd number");
+			}else {
+				$('#output').text("This is an even number");
+			}
+		});
+	});
+	</script>
+
+<!-- ======================== Simple loop ====================================== -->
+	<hr>
+	<h2> Loop </h2>
+	<input id="from" type="text"> + ... + <input id="to" type="text"> = ?<br>
+	<button id="button2">calculate the sum</button>
+	<div>Result from for loop <span id="output-for"></span></div>
+	<div>Result from for while loop <span id="output-while"></span></div>
+	<div>Result from for do .. while loop <span id="output-do"></span></div>
+
+	<script type="text/javascript">
+	$(function(){
+		$("#button2").click(function(){
+			var from = parseInt($('#from').val());
+			var to = parseInt($('#to').val());
+
+
+			// Calculate using for loop
+			var sum = 0;
+			for(var i = from; i <= to; i++){
+				sum = sum + i;
+			}
+			$('#output-for').text(sum);
+
+			// Calculate using for while
+			var sum = 0;
+			var i = from;
+			while(i <= to){
+				sum = sum + i;
+				i++;
+			}
+			$('#output-while').text(sum);
+
+			// Calculate using for do .. while
+			var sum = 0;
+			var i = from;
+			do{
+				sum = sum + i;
+				i++;
+			}while(i <= to);
+			$('#output-do').text(sum);
+		});
+	});
+	</script>
+
+
+<!-- ======================== More complexed loop ====================================== -->
+	<hr>
+	<h2>More complexed Loop </h2>
+	<p>All the number pairs that that their sum can be devided by 5</p>
+	<div id="output-loop2"></div>
+	<script type="text/javascript">
+		$(function(){
+			var output = '';
+			var counter = 0;
+			for(var i = 0; i < 10; i++) {
+				for(var j = 0; j < 10; j++) {
+					if((i + j) % 5 == 0) {
+						counter ++;
+						output += '(' + i + ', ' + j + ') '; 
+					}
+				}
+			}
+			output = "There are " + counter + " pairs, they are : " + output;
+			$('#output-loop2').text(output);
+		});
+	</script>
+
+</body>
+</html>

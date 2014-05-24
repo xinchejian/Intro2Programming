@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Programming with Javascript : Example 1</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#button1").click(function(){
+			var a = parseInt($('text1').val());
+			var b = parseInt($('text2').val());
+			var sum = "?";
+			$('#output').text(sum);
+		});
+	});
+	</script>
+</head>
+<body>
+	<h1>Do math</h1>
+	<input id="text1" type="text"> + <input id="text2" type="text"> = <span id="output"></span><br>
+	<button id="button1">calculate</button>
+</body>
+</html>

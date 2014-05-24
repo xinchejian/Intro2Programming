@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Programming with Javascript : Example 1</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	var counter = 0;
+	$(function(){
+		$("#button1").click(function(){
+			counter ++;
+			var name = $('#text1').val();
+			var greetings = "Hello there " + name;
+			var togo = 100 - counter;
+			greetings = greetings + " and this is the " + counter + " times you are pressing the button";
+			grettings += " And there are " + togo + " times to reach 100";
+			$('#output').text(greetings);
+		});
+	});
+	</script>
+</head>
+<body>
+	<h1>Say hello many times</h1>
+	Name here: <input id="text1" type="text"><br>
+	<button id="button1">Say hello</button>
+	<div id="output"></div>
+</body>
+</html>
