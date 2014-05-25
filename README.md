@@ -6,23 +6,25 @@
 #HTML
 ##Hello World
 ## Basic html elements
+````
 <html>,<head>,<title>,<body>
 <div>
 <h1><h2><h3>...
 <input>
 <button>
+````
 
 * Example 1: Basic html page
 * Lab 1: create your own page
 
 #Javascript
 ## JQuery
+jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML
+
 ##Hello World in javascript
 
 * Example 2: Say hello (text field and a button)
 * Lab 2: Say hello with time
-
-
 
 
 
@@ -93,13 +95,29 @@ if(a > b) {
 
 ### loop
 for loop
+````
+for(var i = 0; i < 10; i ++) {
+	// this would be run 10 times with i = 1, 2, 3, 4, 5, 6, 7, 8, 9 (but not 10)
+}
+````
 
 while loop
+````
+var tasks = 10;
+while(tasks > 0){
+	// Work on the task
+	task --;
+}
+````
 
 do while loop
+````
+do {
+	// something here
+} while(finished == false);
+````
 
-
-
+p
 ## Idea for tasks
 multiplication table  ==> loop
 

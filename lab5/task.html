@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Programming with Javascript</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var number = 3288008303;
+		var output = "Cubic Root of number " + number + " is ";
+		for(var i = 0; i < number ; i++) {
+			if(cube(i) == number) {
+				output += i;
+				break; // This would stop the loop
+			}
+		}
+		$('#output').text(output);
+
+	});
+
+
+	// Define function cube here:
+	// Argument is a number
+	// Returns the cube of the number
+
+	</script>
+</head>
+<body>
+	<h1>Cubic Root of a number:</h1>
+	<div id="output"></div>
+</body>
+</html>

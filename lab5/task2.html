@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction to Programming with Javascript</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#button1").click(function(){
+			var number = parseFloat($('#text1'));
+			var output = "Cubic Root of number " + number + " is " + cubicRoot(number);
+			$('#output').text(output);
+		});
+	});
+
+	function cubicRoot(n) {
+		return '?';
+	}
+
+	</script>
+</head>
+<body>
+	<h1>Bonus task: Cubic Root of a number:</h1>
+	Number here: <input id="text1" type="text"><br>
+	<button id="button1">Find its cubic root</button>
+</body>
+</html>
